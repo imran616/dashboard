@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './redirect.component.html',
-  styleUrl: './redirect.component.css'
+  styleUrl: './redirect.component.css',
 })
-export class RedirectComponent {
-
-}
+export class RedirectComponent {}

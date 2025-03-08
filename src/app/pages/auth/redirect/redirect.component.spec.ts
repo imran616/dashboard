@@ -8,9 +8,8 @@ describe('RedirectComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RedirectComponent]
-    })
-    .compileComponents();
+      imports: [RedirectComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RedirectComponent);
     component = fixture.componentInstance;

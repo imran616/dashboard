@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './authorise.component.html',
-  styleUrl: './authorise.component.css'
+  styleUrl: './authorise.component.css',
 })
-export class AuthoriseComponent {
-
-}
+export class AuthoriseComponent {}
