@@ -1,1 +1,45 @@
-<p>login works!</p>
+<div class="page">
+  <div class="auth-card">
+    <div class="auth-illustration">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+        alt="login"
+      />
+    </div>
+
+    <div class="auth-form">
+      <div class="form-shell">
+        <header class="form-header">
+          <h1>Welcome back</h1>
+          <p>Sign in to continue to your dashboard.</p>
+        </header>
+
+        <form [formGroup]="form" (submit)="onSubmit()" class="form-body">
+          <label for="email">Email address</label>
+          <input id="email" type="email" required formControlName="email" autocomplete="email" />
+
+          <label for="password">Password</label>
+          <div class="password-container">
+            <input
+              id="password"
+              [type]="passwordFieldType"
+              required
+              formControlName="password"
+              autocomplete="current-password"
+            />
+
+            <button class="password-toggle" (click)="togglePasswordVisibility($event)">
+              @if (passwordFieldType === 'password') {
+                <ng-icon name="matVisibilityOff" size="18" />
+              } @else {
+                <ng-icon name="matRemoveRedEye" size="18" />
+              }
+            </button>
+          </div>
+
+          <button type="submit" [disabled]="form.invalid" class="primary-btn">Log in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
